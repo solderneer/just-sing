@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar username="Sudharshan"/>
+    <NavBar username="S.Sudharshan"/>
   </div>
 </template>
 
@@ -16,4 +16,8 @@ export default {
 </script>
 
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
 </style>
