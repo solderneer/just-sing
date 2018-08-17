@@ -29,6 +29,8 @@
         margin: 0px;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
+        display: flex;
+        align-items: center;
     }
     img {
         width: 120px;
@@ -42,17 +44,12 @@
         -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
     }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-    }
     .nav-link {
-        margin-left: 10px;
+        margin-left: 1s0px;
     }
     .header {
         font-size: 17px;
-        margin-left: 250px; /* TODO: FIX THIS*/
+        margin-left: auto; /* TODO: FIX THIS*/
         margin-right: auto;
     }
 </style>
