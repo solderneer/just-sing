@@ -40,7 +40,7 @@
         padding: 13px 10px;
     }
     nav {
-        padding: 0px 20px;
+        padding: 0px 50px;
         -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
         -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
