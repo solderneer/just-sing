@@ -53,6 +53,10 @@
     .nav-link {
         margin-left: 10px;
     }
+    .nav-link:hover {
+        color: #FF7373;
+        cursor: pointer;
+    }
     .search-bar {
         margin-left: auto;
     }
