@@ -5,18 +5,19 @@
             <li class="nav-link">HOME</li>
             <li class="nav-link">HIGHSCORE</li>
             <li class="nav-link">HOW TO PLAY</li>
-            <li class="icon-thing"><font-awesome-icon icon="search" size="lg" /></li>
-            <li><font-awesome-icon icon="heart" size="lg" /></li>
-            <li><font-awesome-icon icon="bell" size="lg" /></li>
-            <li><font-awesome-icon icon="ellipsis-v" size="lg" /></li>
+            <li class="search-bar"><SearchBar /></li>
         </ul>
     </nav>
 </template>
 
 <script>
+    import SearchBar from './SearchBar.vue'
+
     export default {
         name: 'NavBar',
-        props: []
+        components: {
+            SearchBar
+        }
     }    
 </script>
 
@@ -44,10 +45,15 @@
         -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
     }
-    .nav-link {
-        margin-left: 1s0px;
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
-    .icon-thing {
+    .nav-link {
+        margin-left: 10px;
+    }
+    .search-bar {
         margin-left: auto;
     }
 </style>

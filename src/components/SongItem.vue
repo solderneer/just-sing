@@ -39,6 +39,11 @@
         -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
     }
+    .song-card:hover {
+        -webkit-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.50);
+        -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.50);
+        box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.50);
+    }
     h1 {
         padding: 0px;
         margin: 0px;
