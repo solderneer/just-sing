@@ -29,7 +29,7 @@
         font-family: 'Raleway', sans-serif;
         width: 250px;
         padding: 0px;
-        margin: 10px;
+        margin: 20px;
         -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
@@ -43,6 +43,7 @@
     h2 {
         padding: 0px;
         margin: 0px;
+        margin-top: 2px;
         font-weight: 400;
         font-size: 12px;
     }
@@ -51,11 +52,12 @@
         padding: 0px;
         margin: 0px;
         display: flex;
+        justify-content: flex-end;
     }
     img {
         width: 250px;
     }
     .song-info {
-        padding: 20px;
+        padding: 10px;
     }
 </style>

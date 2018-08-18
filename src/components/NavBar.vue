@@ -4,8 +4,8 @@
             <li class="logo"><img alt="Just Sing! logo" src="../assets/logo.png"></li>
             <li class="nav-link">HOME</li>
             <li class="nav-link">HIGHSCORE</li>
-            <li class="header">Welcome {{username}}!</li>
-            <li><font-awesome-icon icon="search" size="lg" /></li>
+            <li class="nav-link">HOW TO PLAY</li>
+            <li class="icon-thing"><font-awesome-icon icon="search" size="lg" /></li>
             <li><font-awesome-icon icon="heart" size="lg" /></li>
             <li><font-awesome-icon icon="bell" size="lg" /></li>
             <li><font-awesome-icon icon="ellipsis-v" size="lg" /></li>
@@ -16,7 +16,7 @@
 <script>
     export default {
         name: 'NavBar',
-        props: ['username']
+        props: []
     }    
 </script>
 
@@ -47,9 +47,7 @@
     .nav-link {
         margin-left: 1s0px;
     }
-    .header {
-        font-size: 17px;
-        margin-left: auto; /* TODO: FIX THIS*/
-        margin-right: auto;
+    .icon-thing {
+        margin-left: auto;
     }
 </style>
