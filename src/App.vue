@@ -2,16 +2,15 @@
   <div id="app">
     <NavBar username="S.Sudharshan"/>
     <section class="main-body">
-        <h1>Reccomended Songs</h1>
         <div class="reccomended-songs">
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
-            <SongItem song_title="Red" song_artist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
         </div>
     </section>
   </div>

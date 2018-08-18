@@ -2,23 +2,28 @@
     <article class="song-card">
         <img alt="Probably should bind this" src="../assets/cover.png" />
         <div class="song-info">
-            <h1>{{song_title}}</h1>
-            <h2>{{song_artist}}</h2>
+            <h1>{{songTitle}}</h1>
+            <h2>{{songArtist}}</h2>
             <ul>
-                <li><font-awesome-icon icon="star" size="md" /></li>
-                <li><font-awesome-icon icon="star" size="md" /></li>
-                <li><font-awesome-icon icon="star" size="md" /></li>
-                <li><font-awesome-icon icon="star" size="md" /></li>
-                <li><font-awesome-icon icon="star" size="md" /></li>
+                <li><RankStar v-bind:isActive="true" /></li>
+                <li><RankStar v-bind:isActive="false" /></li>
+                <li><RankStar v-bind:isActive="false" /></li>
+                <li><RankStar v-bind:isActive="false" /></li>
+                <li><RankStar v-bind:isActive="false" /></li>
             </ul>
         </div>
     </article>
 </template>
 
 <script>
+    import RankStar from './RankStar.vue'
+
     export default {
         name: 'SongItem',
-        props: ['song_title', 'song_artist', 'rank']
+        props: ['songTitle', 'songArtist', 'rank'],
+        components: {
+            RankStar
+        }
     }    
 </script>
 
