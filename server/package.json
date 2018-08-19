@@ -1,0 +1,30 @@
+{
+  "name": "just-sing-server",
+  "version": "1.0.0",
+  "description": "The express.js server to power the just-sing web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solderneer/just-sing.git"
+  },
+  "keywords": [
+    "just-sing",
+    "karaoke"
+  ],
+  "author": "Sudharshan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solderneer/just-sing/issues"
+  },
+  "homepage": "https://github.com/solderneer/just-sing#readme",
+  "dependencies": {
+    "express": "4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "5.4.0",
+    "nodemon": "1.18.3"
+  }
+}

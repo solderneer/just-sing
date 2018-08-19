@@ -53,7 +53,7 @@
     .container-1 input#search:-ms-input-placeholder {  
        color: #65737e;  
     }
-    .container-1 .icon{
+    .container-1 .icon {
       position: absolute;
       top: 50%;
       margin-left: 17px;

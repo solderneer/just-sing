@@ -5,8 +5,8 @@ import { faSearch, faHeart, faBell, faEllipsisV, faStar } from '@fortawesome/fre
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Global components for fontawesome icons (probably not the best idea)
-library.add(faSearch, faHeart, faBell, faEllipsisV, faStar);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+library.add(faSearch, faHeart, faBell, faEllipsisV, faStar)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

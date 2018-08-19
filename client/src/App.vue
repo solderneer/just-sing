@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar username="S.Sudharshan"/>
+    <NavBar/>
     <section class="main-body">
         <div class="reccomended-songs">
             <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
