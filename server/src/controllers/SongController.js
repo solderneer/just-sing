@@ -1,16 +1,26 @@
 import SongItem from '../models/SongItem'
 
-async function register (req, res) {
-  let song = new SongItem(req.body)
+export default {
+  async register (req, res) {
+    let song = new SongItem(req.body)
 
-  try {
-    await song.save()
-    res.send('Registered new song')
-  } catch (err) {
-    res.status(400).send({
-      error: 'Unable to register new song'
-    })
+    try {
+      const response = await song.save()
+      res.send('Registered new song:' + response._id)
+    } catch (err) {
+      res.status(400).send({
+        error: 'Unable to register new song'
+      })
+    }
+  },
+  async findById (req, res) {
+    try {
+      let song = await SongItem.findById(req.params.songId)
+      res.send(song)
+    } catch (err) {
+      res.status(400).send({
+        error: 'Unable to find song'
+      })
+    }
   }
 }
-
-export {register}

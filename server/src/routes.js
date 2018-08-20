@@ -1,5 +1,6 @@
-import {register} from './controllers/SongController'
+import SongController from './controllers/SongController'
 
 export default function (app) {
-    app.post('/song', register)
+    app.post('/song', SongController.register)
+    app.get('/song/:songId', SongController.findById)
 }
