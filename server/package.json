@@ -8,7 +8,7 @@
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "eslint src"
+    "test": "eslint src/**/*.js"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -38,6 +38,7 @@
     "body-parser": "1.18.3",
     "cors": "2.8.4",
     "express": "4.16.3",
+    "mongoose": "5.2.9",
     "morgan": "1.9.0"
   },
   "devDependencies": {
