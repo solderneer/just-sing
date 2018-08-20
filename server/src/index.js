@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import config from './config.json'
 import mongoose from 'mongoose'
+import routes from './routes'
 
 // Setting up MongoDB & mongoose
 mongoose.connect(config.mongooseAddress)
@@ -26,7 +27,8 @@ app.use(bodyParser.json({
   limit: config.bodyLimit
 }))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+routes(app)
+
 app.listen(process.env.PORT || config.port, () => {
   console.log('Server is active and listening...')
 })
