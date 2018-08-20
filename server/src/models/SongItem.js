@@ -1,9 +1,10 @@
-import {Schema} from 'mongoose'
+import mongoose from 'mongoose'
+
+let Schema = mongoose.Schema
 
 let SongItemSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date
 })
 
-export default SongItem = mongoose.model('SongItem', SongItemSchema)
-
+export default mongoose.model('SongItem', SongItemSchema)
