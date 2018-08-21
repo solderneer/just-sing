@@ -38,13 +38,12 @@
             star4: function () { return (this.songRank >= 4) ? true : false },
             star5: function () { return (this.songRank >= 5) ? true : false }
         },
-        mounted: function () {
-            /*
-            let res = SongService.getSong()
+        mounted: async function () {
+            let res = await SongService.getSong()
 
-            this.songTitle = res.name
-            this.songArtist = res.artist
-            this.songRank = res.rating*/
+            this.songTitle = res.data.name
+            this.songArtist = res.data.artist
+            this.songRank = res.data.rating
         }
     }    
 </script>

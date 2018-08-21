@@ -1,12 +1,7 @@
-import axios from 'axios'
+import Api from './Api'
 
 export default {
-    async getUser() {
-      try {
-        let response = await axios.get('http://localhost:8081/random')
-        return response.data
-      } catch (error) {
-        return -1
-      }
+    async getSong() {
+        return Api().get('random')
     }
 }
