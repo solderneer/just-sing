@@ -1,6 +1,6 @@
 <template>
     <article class="song-card">
-        <img alt="Probably should bind this" src="../assets/cover.png" />
+        <img alt="Cover Image" v-bind:src="songImage" />
         <div class="song-info">
             <h1>{{songTitle}}</h1>
             <h2>{{songArtist}}</h2>
@@ -25,7 +25,8 @@
             return {
                 songTitle: '',
                 songArtist: '',
-                songRank: null
+                songRank: null,
+                songImage: ''
             }
         },
         components: {
@@ -44,6 +45,7 @@
             this.songTitle = res.data.name
             this.songArtist = res.data.artist
             this.songRank = res.data.rating
+            this.songImage = 'http://localhost:8081/assets/' + res.data.cover // TODO: change hardcoded address
         }
     }    
 </script>
