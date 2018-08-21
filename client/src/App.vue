@@ -3,14 +3,14 @@
     <NavBar/>
     <section class="main-body">
         <div class="reccomended-songs">
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
-            <SongItem songTitle="Red" songArtist="Taylor Swift" song_ranking="1" />
+            <SongItem />
+            <SongItem />
+            <SongItem />
+            <SongItem />
+            <SongItem />
+            <SongItem />
+            <SongItem />
+            <SongItem />
         </div>
     </section>
   </div>

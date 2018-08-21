@@ -5,11 +5,11 @@
             <h1>{{songTitle}}</h1>
             <h2>{{songArtist}}</h2>
             <ul>
-                <li><RankStar v-bind:isActive="true" /></li>
-                <li><RankStar v-bind:isActive="false" /></li>
-                <li><RankStar v-bind:isActive="false" /></li>
-                <li><RankStar v-bind:isActive="false" /></li>
-                <li><RankStar v-bind:isActive="false" /></li>
+                <li><RankStar v-bind:isActive="star1" /></li>
+                <li><RankStar v-bind:isActive="star2" /></li>
+                <li><RankStar v-bind:isActive="star3" /></li>
+                <li><RankStar v-bind:isActive="star4" /></li>
+                <li><RankStar v-bind:isActive="star5" /></li>
             </ul>
         </div>
     </article>
@@ -17,12 +17,34 @@
 
 <script>
     import RankStar from './RankStar.vue'
+    import SongService from '../services/SongService'
 
     export default {
         name: 'SongItem',
-        props: ['songTitle', 'songArtist', 'rank'],
+        data: function () {
+            return {
+                songTitle: '',
+                songArtist: '',
+                songRank: null
+            }
+        },
         components: {
             RankStar
+        },
+        computed: {
+            star1: function () { return (this.songRank >= 1) ? true : false },
+            star2: function () { return (this.songRank >= 2) ? true : false },
+            star3: function () { return (this.songRank >= 3) ? true : false },
+            star4: function () { return (this.songRank >= 4) ? true : false },
+            star5: function () { return (this.songRank >= 5) ? true : false }
+        },
+        mounted: function () {
+            /*
+            let res = SongService.getSong()
+
+            this.songTitle = res.name
+            this.songArtist = res.artist
+            this.songRank = res.rating*/
         }
     }    
 </script>
