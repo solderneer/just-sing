@@ -22,5 +22,19 @@ export default {
         error: 'Unable to find song'
       })
     }
+  },
+  async getRandom (req, res) {
+    try {
+      const count = await SongItem.estimatedDocumentCount()
+
+      let random = Math.floor(Math.random() * count)
+      let song = await SongItem.findOne().skip(random)
+
+      res.send(song)
+    } catch (err) {
+      res.status(400).send({
+        error: 'Unable to fetch random song'
+      })
+    }
   }
 }
