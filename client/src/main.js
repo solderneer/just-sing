@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch, faHeart, faBell, faEllipsisV, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faHeart, faBell, faEllipsisV, faStar, faAngleDoubleRight, faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Home from './views/Home.vue'
@@ -21,7 +21,7 @@ const router = new VueRouter({
 })
 
 // Global components for fontawesome icons (probably not the best idea)
-library.add(faSearch, faHeart, faBell, faEllipsisV, faStar)
+library.add(faSearch, faHeart, faBell, faEllipsisV, faStar, faAngleDoubleLeft, faAngleDoubleRight)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

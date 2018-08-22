@@ -2,9 +2,9 @@
     <nav class="container">
         <ul class="navbar" role="navigation">      
             <li class="logo"><img alt="Just Sing! logo" src="../assets/logo.png"></li>
-            <li class="nav-link">HOME</li>
+            <li class="nav-link" v-on:click="linkHome">HOME</li>
             <li class="nav-link">HIGHSCORE</li>
-            <li class="nav-link">HOW TO PLAY</li>
+            <li class="nav-link" v-on:click="linkHowto">HOW TO PLAY</li>
             <li class="search-bar"><SearchBar /></li>
         </ul>
     </nav>
@@ -17,6 +17,11 @@
         name: 'NavBar',
         components: {
             SearchBar
+        },
+        methods: {
+            linkHome: function () { this.$router.push('/') },
+            linkPlay: function () { this.$router.push('play') },
+            linkHowto: function () { this.$router.push('howto') }
         }
     }    
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app-view">
     <NavBar />
     <section class="main-body">
         <div class="reccomended-songs">
@@ -13,6 +13,8 @@
             <SongItem />
         </div>
     </section>
+    <font-awesome-icon icon="angle-double-left" size="lg" id="left-arrow"/>
+    <font-awesome-icon icon="angle-double-right" size="lg" id="right-arrow" />
   </div>
 </template>
 
@@ -56,4 +58,39 @@ export default {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    #left-arrow {
+        position: absolute;
+        top: 50vh;
+        left: 2vw;
+        font-size: 30px;
+
+        -webkit-transition: font-size .55s ease;
+        -moz-transition: font-size .55s ease;
+        -ms-transition: font-size .55s ease;
+        -o-transition: font-size .55s ease;
+        transition: font-size .55s ease;
+    }
+    #left-arrow:hover {
+        font-size: 31px;
+        left: 2vw;
+    }
+
+    #right-arrow {
+        position: absolute;
+        top: 50vh;
+        right: 2vw;
+        font-size: 30px;
+
+         -webkit-transition: font-size .55s ease;
+        -moz-transition: font-size .55s ease;
+        -ms-transition: font-size .55s ease;
+        -o-transition: font-size .55s ease;
+        transition: font-size .55s ease;
+    }
+    #right-arrow:hover {
+        font-size: 31px;
+        right: 2vw;
+    }
+
 </style>
