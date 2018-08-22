@@ -1,32 +1,25 @@
 <template>
-  <div id="app-view">
-    <NavBar />
-    <section class="main-body">
-        <div class="reccomended-songs">
-            <SongItem />
-            <SongItem />
-            <SongItem />
-            <SongItem />
-            <SongItem />
-            <SongItem />
-            <SongItem />
-            <SongItem />
-        </div>
-    </section>
-    <font-awesome-icon icon="angle-double-left" size="lg" id="left-arrow"/>
-    <font-awesome-icon icon="angle-double-right" size="lg" id="right-arrow" />
-  </div>
+    <div id="app-view">
+        <NavBar />
+        <section class="main-body">
+            <SongGroup />
+        </section>
+        <NavArrow direction="left" :disable="true" id="left-arrow"/>
+        <NavArrow direction="right" :disable="false" id="right-arrow"/>
+    </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue'
-import SongItem from '../components/SongItem.vue'
+import SongGroup from '../components/SongGroup.vue'
+import NavArrow from '../components/NavArrow.vue'
 
 export default {
   name: 'Home',
   components: {
     NavBar,
-    SongItem
+    SongGroup,
+    NavArrow
   }
 }
 </script>
@@ -52,44 +45,15 @@ export default {
         padding: 10px;
     }
 
-    .reccomended-songs {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     #left-arrow {
         position: absolute;
         top: 50vh;
-        left: 2vw;
-        font-size: 30px;
-
-        -webkit-transition: font-size .55s ease;
-        -moz-transition: font-size .55s ease;
-        -ms-transition: font-size .55s ease;
-        -o-transition: font-size .55s ease;
-        transition: font-size .55s ease;
-    }
-    #left-arrow:hover {
-        font-size: 31px;
         left: 2vw;
     }
 
     #right-arrow {
         position: absolute;
         top: 50vh;
-        right: 2vw;
-        font-size: 30px;
-
-         -webkit-transition: font-size .55s ease;
-        -moz-transition: font-size .55s ease;
-        -ms-transition: font-size .55s ease;
-        -o-transition: font-size .55s ease;
-        transition: font-size .55s ease;
-    }
-    #right-arrow:hover {
-        font-size: 31px;
         right: 2vw;
     }
 
