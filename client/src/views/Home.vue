@@ -2,10 +2,12 @@
     <div id="app-view">
         <NavBar />
         <section class="main-body">
-            <SongGroup />
+            <transition name="slide-fade">
+                <SongGroup v-if="show"/>
+            </transition>
         </section>
-        <NavArrow direction="left" :disable="true" id="left-arrow"/>
-        <NavArrow direction="right" :disable="false" id="right-arrow"/>
+        <NavArrow direction="left" :disable="true" id="left-arrow" v-on:click-arrow="prevPage"/>
+        <NavArrow direction="right" :disable="false" id="right-arrow" v-on:click-arrow="nextPage"/>
     </div>
 </template>
 
@@ -20,6 +22,19 @@ export default {
     NavBar,
     SongGroup,
     NavArrow
+  },
+  data: function () {
+    return {
+        show: true
+    }
+  },
+  methods: {
+    prevPage () {
+
+    },
+    nextPage () {
+        
+    }
   }
 }
 </script>
@@ -57,4 +72,15 @@ export default {
         right: 2vw;
     }
 
+    .slide-fade-enter-active {
+      transition: all .3s ease;
+    }
+    .slide-fade-leave-active {
+      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active below version 2.1.8 */ {
+      transform: translateX(10px);
+      opacity: 0;
+    }
 </style>

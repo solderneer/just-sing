@@ -1,6 +1,8 @@
 <template>
-    <font-awesome-icon icon="angle-double-left" size="lg" id="left-arrow" v-if="(direction == 'left')" v-bind:class="{ active: disable }" class="icon"/>
-    <font-awesome-icon icon="angle-double-right" size="lg" id="right-arrow" v-else v-bind:class="{ active: disable }" class="icon"/>
+    <font-awesome-icon icon="angle-double-left" size="lg" id="left-arrow" v-if="(direction == 'left')" 
+    v-bind:class="{ active: disable }" class="icon" v-on:click="$emit('click-arrow')"/>
+    <font-awesome-icon icon="angle-double-right" size="lg" id="right-arrow" v-else 
+    v-bind:class="{ active: disable }" class="icon" v-on:click="$emit('click-arrow')"/>
 </template>
 
 <script>
