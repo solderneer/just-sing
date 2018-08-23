@@ -1,4 +1,5 @@
 import SongItem from '../models/SongItem'
+import seedrandom from 'seedrandom'
 
 export default {
   async register (req, res) {
@@ -25,9 +26,17 @@ export default {
   },
   async getRandom (req, res) {
     try {
+      // Get document count for no. of song items
       const count = await SongItem.estimatedDocumentCount()
+      let random = 0
 
-      let random = Math.floor(Math.random() * count)
+      // setting up PRNG with seed
+      let rng = seedrandom(req.params.seed)
+      for (let i = 0; i <= req.params.index; i++) {
+        random = rng()
+      }
+
+      random = Math.floor(random * count)
       let song = await SongItem.findOne().skip(random)
 
       res.send(song)
