@@ -66,6 +66,11 @@ export default {
         }, 200)
       }, 10)
     }
+  },
+  watch: {
+    page: function () {
+      this.page = (this.page < 1) ? 1 : this.page
+    }
   }
 }
 </script>
