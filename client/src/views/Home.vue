@@ -6,7 +6,7 @@
                 <SongGroup v-if="show" :seed="seed" :page="page"/>
             </transition>
         </section>
-        <NavArrow direction="left" :disable="true" id="left-arrow" v-on:click-arrow="prevPage"/>
+        <NavArrow direction="left" :disable="disableLeft" id="left-arrow" v-on:click-arrow="prevPage"/>
         <NavArrow direction="right" :disable="false" id="right-arrow" v-on:click-arrow="nextPage"/>
     </div>
 </template>
@@ -27,21 +27,35 @@ export default {
     return {
         show: true,
         seed: 'hello',
-        page: 1
+        page: 1,
+        disableLeft: true,
+        disableRight: false
     }
   },
   methods: {
     prevPage () {
+        // Don't execute if there is a disabled button
+        if (this.disableLeft == true)
+            return
+
         this.show = !this.show
         setTimeout(() => {
             this.page -= 1 // TODO: Validation
+            if (this.page == 1)
+                this.disableLeft = true
             this.show = !this.show
         }, 1000)
     },
     nextPage () {
+        // Don't execute if there is a disabled button
+        if (this.disableRight == true)
+            return
+
         this.show = !this.show
         setTimeout(() => {
             this.page += 1 // TODO: Validation
+            if (this.page == 2)
+                this.disableLeft = false
             this.show = !this.show
         }, 1000)
     }
