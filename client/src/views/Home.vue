@@ -44,7 +44,7 @@ export default {
             if (this.page == 1)
                 this.disableLeft = true
             this.show = !this.show
-        }, 1000)
+        }, 500)
     },
     nextPage () {
         // Don't execute if there is a disabled button
@@ -57,7 +57,7 @@ export default {
             if (this.page == 2)
                 this.disableLeft = false
             this.show = !this.show
-        }, 1000)
+        }, 500)
     }
   }
 }
@@ -97,14 +97,17 @@ export default {
     }
 
     .slide-fade-enter-active {
-      transition: all .3s ease;
+      transition: all 0.5s;
     }
     .slide-fade-leave-active {
-      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+      transition: all 0.5s;
     }
-    .slide-fade-enter, .slide-fade-leave-to
-    /* .slide-fade-leave-active below version 2.1.8 */ {
-      transform: translateX(10px);
-      opacity: 0;
+    .slide-fade-enter {
+      transform: translateX(1300px);
+      opacity: 100;
+    }
+    .slide-fade-leave-to {
+      transform: translateX(-1300px);
+      opacity: 100;
     }
 </style>
