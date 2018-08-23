@@ -21,6 +21,7 @@
 
     export default {
         name: 'SongItem',
+        props: ['seed', 'page', 'index'],
         data: function () {
             return {
                 songTitle: '',
@@ -40,12 +41,12 @@
             star5: function () { return (this.songRank >= 5) ? true : false }
         },
         mounted: async function () {
-            let res = await SongService.getSong()
+            let res = await SongService.getSong(this.seed, this.page, this.index)
 
             this.songTitle = res.data.name
             this.songArtist = res.data.artist
             this.songRank = res.data.rating
-            this.songImage = 'http://localhost:8081/assets/' + res.data.cover // TODO: change hardcoded address
+            this.songImage = 'http://localhost:8081/assets/' + res.data.cover // TODO: change hardcoded address*/
         }
     }    
 </script>

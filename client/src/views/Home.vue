@@ -3,7 +3,7 @@
         <NavBar />
         <section class="main-body">
             <transition name="slide-fade">
-                <SongGroup v-if="show"/>
+                <SongGroup v-if="show" :seed="seed" :page="page"/>
             </transition>
         </section>
         <NavArrow direction="left" :disable="true" id="left-arrow" v-on:click-arrow="prevPage"/>
@@ -25,15 +25,25 @@ export default {
   },
   data: function () {
     return {
-        show: true
+        show: true,
+        seed: 'hello',
+        page: 1
     }
   },
   methods: {
     prevPage () {
-
+        this.show = !this.show
+        setTimeout(() => {
+            this.page -= 1 // TODO: Validation
+            this.show = !this.show
+        }, 1000)
     },
     nextPage () {
-        
+        this.show = !this.show
+        setTimeout(() => {
+            this.page += 1 // TODO: Validation
+            this.show = !this.show
+        }, 1000)
     }
   }
 }
