@@ -26,6 +26,10 @@ export default {
   },
   async getRandom (req, res) {
     try {
+      // Validate for invalid indexes
+      if (req.params.index < 1) 
+        throw "Invalid index"
+
       // Get document count for no. of song items
       const count = await SongItem.estimatedDocumentCount()
       let random = 0

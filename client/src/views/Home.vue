@@ -40,7 +40,7 @@ export default {
 
         this.show = !this.show
         setTimeout(() => {
-            this.page -= 1 // TODO: Validation
+            this.page -= 1
             if (this.page == 1)
                 this.disableLeft = true
             this.show = !this.show
@@ -53,7 +53,7 @@ export default {
 
         this.show = !this.show
         setTimeout(() => {
-            this.page += 1 // TODO: Validation
+            this.page += 1
             if (this.page == 2)
                 this.disableLeft = false
             this.show = !this.show
