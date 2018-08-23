@@ -2,7 +2,7 @@
     <div id="app-view">
         <NavBar />
         <section class="main-body">
-            <transition name="slide-fade">
+            <transition v-bind:name="transitionName">>
                 <SongGroup v-if="show" :seed="seed" :page="page"/>
             </transition>
         </section>
@@ -26,38 +26,45 @@ export default {
   data: function () {
     return {
         show: true,
-        seed: 'hello',
+        seed: "hello",
         page: 1,
         disableLeft: true,
-        disableRight: false
+        disableRight: false,
+        transitionName: ""
     }
   },
   methods: {
     prevPage () {
-        // Don't execute if there is a disabled button
-        if (this.disableLeft == true)
-            return
+      // Don't execute if there is a disabled button
+      if (this.disableLeft == true)
+          return
 
+      this.transitionName = "left"
+      setTimeout(() => {
         this.show = !this.show
         setTimeout(() => {
             this.page -= 1
             if (this.page == 1)
                 this.disableLeft = true
             this.show = !this.show
-        }, 500)
+        }, 200)
+      }, 10)
     },
     nextPage () {
-        // Don't execute if there is a disabled button
-        if (this.disableRight == true)
-            return
+      // Don't execute if there is a disabled button
+      if (this.disableRight == true)
+          return
 
+      this.transitionName = "right"
+      setTimeout(() => { 
         this.show = !this.show
         setTimeout(() => {
             this.page += 1
             if (this.page == 2)
                 this.disableLeft = false
             this.show = !this.show
-        }, 500)
+        }, 200)
+      }, 10)
     }
   }
 }
@@ -96,18 +103,33 @@ export default {
         right: 2vw;
     }
 
-    .slide-fade-enter-active {
-      transition: all 0.5s;
+    .right-enter-active {
+      transition: all 0.3s;
     }
-    .slide-fade-leave-active {
-      transition: all 0.5s;
+    .right-leave-active {
+      transition: all 0.3s;
     }
-    .slide-fade-enter {
-      transform: translateX(1300px);
-      opacity: 100;
+    .right-enter {
+      transform: translateX(100px);
+      opacity: 0;
     }
-    .slide-fade-leave-to {
-      transform: translateX(-1300px);
-      opacity: 100;
+    .right-leave-to {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    .left-enter-active {
+      transition: all 0.3s;
+    }
+    .left-leave-active {
+      transition: all 0.3s;
+    }
+    .left-enter {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    .left-leave-to {
+      transform: translateX(100px);
+      opacity: 0;
     }
 </style>
