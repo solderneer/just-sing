@@ -1,9 +1,9 @@
-import SongItem from '../models/SongItem'
+import SongModel from '../models/SongModel'
 import seedrandom from 'seedrandom'
 
 export default {
   async register (req, res) {
-    let song = new SongItem(req.body)
+    let song = new SongModel(req.body)
 
     try {
       const response = await song.save()
@@ -16,7 +16,7 @@ export default {
   },
   async findById (req, res) {
     try {
-      let song = await SongItem.findById(req.params.songId)
+      let song = await SongModel.findById(req.params.songId)
       res.send(song)
     } catch (err) {
       res.status(400).send({
@@ -31,7 +31,7 @@ export default {
         throw "Invalid index"
 
       // Get document count for no. of song items
-      const count = await SongItem.estimatedDocumentCount()
+      const count = await SongModel.estimatedDocumentCount()
       let random = 0
 
       // setting up PRNG with seed
@@ -41,7 +41,7 @@ export default {
       }
 
       random = Math.floor(random * count)
-      let song = await SongItem.findOne().skip(random)
+      let song = await SongModel.findOne().skip(random)
 
       res.send(song)
     } catch (err) {
