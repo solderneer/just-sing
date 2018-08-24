@@ -3,7 +3,7 @@
         <NavBar />
         <section class="main-body">
             <transition v-bind:name="transitionName">>
-                <SongGroup v-if="show" :seed="seed" :page="page"/>
+                <SongGroup v-if="show" :id="id" :page="page"/>
             </transition>
         </section>
         <NavArrow direction="left" :disable="disableLeft" id="left-arrow" v-on:click-arrow="prevPage"/>
@@ -16,6 +16,8 @@ import NavBar from '../components/NavBar.vue'
 import SongGroup from '../components/SongGroup.vue'
 import NavArrow from '../components/NavArrow.vue'
 
+import SessionService from '../services/SessionService'
+
 export default {
   name: 'Home',
   components: {
@@ -25,7 +27,8 @@ export default {
   },
   data: function () {
     return {
-        show: true,
+        show: false,
+        id: "",
         seed: "hello",
         page: 1,
         disableLeft: true,
@@ -71,6 +74,11 @@ export default {
     page: function () {
       this.page = (this.page < 1) ? 1 : this.page
     }
+  },
+  mounted: async function () {
+    let res = await SessionService.register(this.seed)
+    this.id = res.data
+    this.show = true
   }
 }
 </script>

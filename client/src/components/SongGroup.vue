@@ -1,13 +1,13 @@
 <template>
      <div class="reccomended-songs">
-        <SongItem :seed="seed" :page="page" index="1"/>
-        <SongItem :seed="seed" :page="page" index="2"/>
-        <SongItem :seed="seed" :page="page" index="3"/>
-        <SongItem :seed="seed" :page="page" index="4"/>
-        <SongItem :seed="seed" :page="page" index="5"/>
-        <SongItem :seed="seed" :page="page" index="6"/>
-        <SongItem :seed="seed" :page="page" index="7"/>
-        <SongItem :seed="seed" :page="page" index="8"/>
+        <SongItem :id="id" :page="page" index="1"/>
+        <SongItem :id="id" :page="page" index="2"/>
+        <SongItem :id="id" :page="page" index="3"/>
+        <SongItem :id="id" :page="page" index="4"/>
+        <SongItem :id="id" :page="page" index="5"/>
+        <SongItem :id="id" :page="page" index="6"/>
+        <SongItem :id="id" :page="page" index="7"/>
+        <SongItem :id="id" :page="page" index="8"/>
     </div>
 </template>
 
@@ -16,7 +16,7 @@
 
     export default {
         name: 'SongGroup',
-        props: ['seed', 'page'],
+        props: ['id', 'page'],
         components: {
             SongItem
         }

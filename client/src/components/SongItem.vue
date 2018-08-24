@@ -21,7 +21,7 @@
 
     export default {
         name: 'SongItem',
-        props: ['seed', 'page', 'index'],
+        props: ['id', 'page', 'index'],
         data: function () {
             return {
                 songTitle: '',
@@ -41,7 +41,7 @@
             star5: function () { return (this.songRank >= 5) ? true : false }
         },
         mounted: async function () {
-            let res = await SongService.getSong(this.seed, this.page, this.index)
+            let res = await SongService.getSong(this.id, this.page, this.index)
 
             this.songTitle = res.data.name
             this.songArtist = res.data.artist
