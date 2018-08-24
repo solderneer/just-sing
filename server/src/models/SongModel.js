@@ -2,11 +2,11 @@ import mongoose from 'mongoose'
 
 let Schema = mongoose.Schema
 
-let SongItemSchema = new Schema({
+let SongSchema = new Schema({
   name: String,
   artist: String,
   rating: Number,
   cover: String
 })
 
-export default mongoose.model('SongItem', SongItemSchema)
+export default mongoose.model('SongModel', SongSchema)
