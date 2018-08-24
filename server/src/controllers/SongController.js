@@ -1,4 +1,5 @@
 import SongModel from '../models/SongModel'
+import SessionModel from '../models/SessionModel'
 import seedrandom from 'seedrandom'
 
 export default {
@@ -26,28 +27,21 @@ export default {
   },
   async getRandom (req, res) {
     try {
+      let index = parseInt(req.params.index)
+
       // Validate for invalid indexes
-      if (req.params.index < 1) 
+      if (index < 0) 
         throw "Invalid index"
 
-      // Get document count for no. of song items
-      const count = await SongModel.estimatedDocumentCount()
-      let random = 0
-
-      // setting up PRNG with seed
-      let rng = seedrandom(req.params.seed)
-      for (let i = 0; i <= req.params.index; i++) {
-        random = rng()
-      }
-
-      random = Math.floor(random * count)
-      let song = await SongModel.findOne().skip(random)
+      let session = await SessionModel.findById(req.params.id)
+      let song = await SongModel.findOne().skip(session.index_array[index])
 
       res.send(song)
     } catch (err) {
       res.status(400).send({
         error: 'Unable to fetch random song'
       })
+      console.log(err)
     }
   }
 }
