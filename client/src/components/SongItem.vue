@@ -46,7 +46,7 @@
             this.songTitle = res.data.name
             this.songArtist = res.data.artist
             this.songRank = res.data.rating
-            this.songImage = 'http://localhost:8081/assets/album' + res.data.album // TODO: change hardcoded address*/
+            this.songImage = 'http://localhost:8081/assets/' + res.data.album // TODO: change hardcoded address*/
         }
     }    
 </script>
