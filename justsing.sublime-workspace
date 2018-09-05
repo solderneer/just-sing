@@ -443,24 +443,7 @@
 			"file": "client/src/components/SongItem.vue",
 			"settings":
 			{
-				"buffer_size": 3182,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/src/services/SongService.js",
-			"settings":
-			{
-				"buffer_size": 265,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/src/components/SongGroup.vue",
-			"settings":
-			{
-				"buffer_size": 939,
+				"buffer_size": 3187,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -616,23 +599,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/just-sing",
-		"/Users/solderneer/Documents/Projects/just-sing/server"
+		"/Users/solderneer/Documents/Projects/just-sing"
 	],
 	"file_history":
 	[
+		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/ActionBar.vue",
+		"/Users/solderneer/Documents/Projects/just-sing/client/src/main.js",
+		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/SongGroup.vue",
+		"/Users/solderneer/Documents/Projects/just-sing/server/src/controllers/SessionController.js",
+		"/Users/solderneer/Documents/Projects/just-sing/server/src/models/SongModel.js",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/services/SongService.js",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/services/SessionService.js",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/views/Home.vue",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/NavArrow.vue",
-		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/SongGroup.vue",
-		"/Users/solderneer/Documents/Projects/just-sing/server/src/models/SongModel.js",
 		"/Users/solderneer/Documents/Projects/just-sing/server/src/routes.js",
-		"/Users/solderneer/Documents/Projects/just-sing/server/src/controllers/SessionController.js",
 		"/Users/solderneer/Documents/Projects/just-sing/server/src/models/SessionModel.js",
 		"/Users/solderneer/Documents/Projects/just-sing/server/src/controllers/SongController.js",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/SongItem.vue",
-		"/Users/solderneer/Documents/Projects/just-sing/client/src/main.js",
 		"/Users/solderneer/Documents/Projects/just-sing/client/src/components/NavBar.vue",
 		"/Users/solderneer/Documents/Projects/just-sing/server/src/index.js",
 		"/Users/solderneer/Documents/Projects/just-sing/server/src/models/SongItem.js",
@@ -747,8 +730,7 @@
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/index.html",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/style.css",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/timeline.css",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/timeline.css"
 	],
 	"find":
 	{
@@ -789,7 +771,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -798,15 +780,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3182,
+						"buffer_size": 3187,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1578,
-								1578
+								1767,
+								1767
 							]
 						],
 						"settings":
@@ -815,72 +797,12 @@
 							"syntax": "Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 70.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/src/services/SongService.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 265,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24,
-								25
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/src/components/SongGroup.vue",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								814,
-								814
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]

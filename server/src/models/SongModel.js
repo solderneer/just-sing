@@ -6,7 +6,7 @@ let SongSchema = new Schema({
   name: String,
   artist: String,
   rating: Number,
-  cover: String
+  album: String
 })
 
 export default mongoose.model('SongModel', SongSchema)

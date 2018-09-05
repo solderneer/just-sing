@@ -34,4 +34,5 @@ export default {
       })
     }
   }
+  // TODO: add a delete method to get rid of old sessions
 }

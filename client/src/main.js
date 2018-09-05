@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch, faHeart, faBell, faEllipsisV, faStar, faAngleDoubleRight, faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faHeart, faBell, faEllipsisV, faStar, faAngleDoubleRight, faAngleDoubleLeft, faPlayCircle, faPauseCircle,  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Home from './views/Home.vue'
